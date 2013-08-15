@@ -49,6 +49,9 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.9)
+    numbers_and_words (0.9.0)
+      activesupport
+      i18n
     pg (0.16.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -100,6 +103,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jquery-rails
+  numbers_and_words
   pg
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
