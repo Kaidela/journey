@@ -7,5 +7,22 @@
 
 	box-shadow: 3px 3px 3px #cfcfcf; 
 	-moz-box-shadow: 3px 3px 3px #cfcfcf; 
-	-webkit-box-shadow: 3px 3px 3px #cfcfcf; 
+	-webkit-box-shadow: 3px 3px 3px #cfcfcf;
+}
+
+.collapsed{
+	.day-card-collapsed{
+		display: block;
+	}
+	.day-card-expanded{
+		display: none;
+	}
+}
+.expanded{
+	.day-card-expanded{
+		display: block;
+	}
+	.day-card-collapsed{
+		display: none;
+	}
 }

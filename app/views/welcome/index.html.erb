@@ -1,14 +1,19 @@
 <div class="day-card-list">
 	<% (1...14).each do |day_number| %>
-		<div class="day-card padded">
-			<div class="day-card-header row">
-				<h1 class="inline">Journey</h1>
-				<h2 class="inline">- Ryan and Sarah</h2>
-				<p class="inline">Go to China...</p>
+		<div class="day-card <%= day_number == 1 ? 'expanded' : 'collapsed' %> padded">
+			<div class="day-card-collapsed row">
+				<h2 class="inline"> Day <%= day_number.to_words.humanize %> </h2>
 			</div>
-			<div class="day-card-body row">
-				<h2 class="inline">Day <%= day_number.to_words.humanize %></h2>
-				<p>Melboure to Beijing</p>
+			<div class= "day-card-expanded">
+				<div class="day-card-header row">
+					<h1 class="inline">Journey</h1>
+					<h2 class="inline">- Ryan and Sarah</h2>
+					<p class="inline">Go to China...</p>
+				</div>
+				<div class="day-card-body row">
+					<h2 class="inline">Day <%= day_number.to_words.humanize %></h2>
+					<p>Melboure to Beijing</p>
+				</div>
 			</div>
 		</div>
 	<% end %>
