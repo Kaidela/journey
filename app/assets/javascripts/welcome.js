@@ -4,5 +4,7 @@ $( document ).ready(function() {
         $('.day-card').addClass('collapsed');
         $('.day-card').removeClass('expanded');
         $(this).addClass('expanded');
+        var cardPosition = $(this).position();
+        $( document ).scrollTop(cardPosition.top);
     });
 });
