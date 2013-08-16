@@ -1,6 +1,6 @@
 <div class="day-card-list">
 	<% (1...14).each do |day_number| %>
-		<div class="day-card <%= day_number == 1 ? 'expanded' : 'collapsed' %> padded">
+		<div class="day-card <%= day_number == 1 ? 'expanded' : 'collapsed' %> padded" style="z-index: <%= 14 - day_number %> ">
 			<div class="day-card-collapsed row">
 				<h2 class="inline"> Day <%= day_number.to_words.humanize %> </h2>
 			</div>
@@ -12,7 +12,7 @@
 				</div>
 				<div class="day-card-body row">
 					<h2 class="inline">Day <%= day_number.to_words.humanize %></h2>
-					<p>Melboure to Beijing</p>
+					<p>Melbourne to Beijing</p>
 				</div>
 			</div>
 		</div>
