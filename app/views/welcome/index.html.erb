@@ -1,6 +1,6 @@
 <div class="day-card-list">
 	<% @days.each do |day| %>
-		<div class="day-card <%= day_state(day) %> padded" style="z-index: <%= day_order(day) %> ">
+		<div class="day-card <%= day_state(day) %> <%= day_view(day) %> padded" style="z-index: <%= day_order(day) %> ">
 			<div class="day-card-collapsed row">
 				<h2 class="inline"> Day <%= day.human_day_number %> </h2>
 			</div>
