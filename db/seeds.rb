@@ -4,7 +4,7 @@ DESTINATIONS = [
   {:arrive_date => Date.new(2013,8,31), :leave_date => Date.new(2013,9,4), :location => 'Beijing'},
   {:arrive_date => Date.new(2013,9,5), :leave_date => Date.new(2013,9,7), :location => 'Xi\'an'},
   {:arrive_date => Date.new(2013,9,7), :leave_date => Date.new(2013,9,11), :location => 'Shanghai'},
-  {:arrive_date => Date.new(2013,9,11), :leave_date => Date.new(2013,9,14), :location => 'Beijing'},
+  {:arrive_date => Date.new(2013,9,11), :leave_date => Date.new(2013,9,13), :location => 'Beijing'},
   {:arrive_date => Date.new(2013,9,14), :leave_date => Date.new(2013,9,14), :location => 'Singapore'},
   {:arrive_date => Date.new(2013,9,15), :leave_date => Date.new(2013,9,16), :location => 'Melbourne'},
 ]
