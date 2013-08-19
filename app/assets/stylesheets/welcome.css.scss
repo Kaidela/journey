@@ -14,6 +14,18 @@
 	-webkit-postition: relative;
 }
 
+.day-card.expanded{
+	height: 250px;
+	overflow: hidden;
+	transition: height 1s;
+	-webkit-transition: height 1s;
+}
+
+.day-card-collapsed{
+	height: 50px;
+	overflow: hidden;
+}
+
 .collapsed{
 	.day-card-collapsed{
 		display: block;
