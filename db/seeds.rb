@@ -30,7 +30,7 @@ def end_location(day_number)
     if day_destinations.last[:location] == tomorrow_destinations.first[:location]
       nil
     else
-      tomorrow_destinations.first[:location]    
+      tomorrow_destinations.first[:location]
     end
   else
     day_destinations.last[:location]

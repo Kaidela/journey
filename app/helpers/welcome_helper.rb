@@ -6,9 +6,11 @@ module WelcomeHelper
       'collapsed'
     end
   end
+
   def day_order(day)
     Day.all.count - day.day_number
   end
+
   def day_view(day)
     if day.is_current?
       'today'
@@ -22,4 +24,13 @@ module WelcomeHelper
       'past'
     end
   end 
+
+  def day_locations(day)
+    if day.end_location
+      day.start_location + ' to ' + day.end_location
+    elsif day.end_location == nil
+      day.start_location
+    end
+  end
 end
+
