@@ -7,7 +7,7 @@ module WelcomeHelper
     end
   end
   def day_order(day)
-    14 - day.day_number
+    Day.all.count - day.day_number
   end
   def day_view(day)
     if day.is_current?
