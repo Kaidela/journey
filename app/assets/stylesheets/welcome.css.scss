@@ -17,8 +17,11 @@
 .day-card.expanded{
 	height: 250px;
 	overflow: hidden;
+
 	transition: height 1s;
 	-webkit-transition: height 1s;
+	-o-transition: height 1s;
+	-moz-transition: height 1s;
 }
 
 .day-card-collapsed{

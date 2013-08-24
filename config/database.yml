@@ -2,7 +2,8 @@ development:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: journey
+  host: localhost
+  username: postgres
   password: china
   database: journey_development
 
@@ -13,7 +14,8 @@ test:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: journey
+  host: localhost
+  username: postgres
   password: china
   database: journey_test
 
@@ -21,6 +23,7 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: journey
+  host: localhost
+  username: postgres
   password: china
   database: journey_production

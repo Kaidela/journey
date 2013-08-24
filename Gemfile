@@ -27,6 +27,9 @@ gem 'numbers_and_words'
 # Use rails_12factor
 gem 'rails_12factor', group: :production
 
+#Use rubyracer
+gem 'therubyracer', require: "v8"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

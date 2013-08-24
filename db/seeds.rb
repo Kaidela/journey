@@ -1,3 +1,6 @@
+Day.delete_all
+Travel.delete_all
+
 START_DATE = Date.new(2013,8,30)
 DESTINATIONS = [
   {:arrive_date => Date.new(2013,8,29), :leave_date => Date.new(2013,8,30), :location => 'Melbourne'},
@@ -8,6 +11,12 @@ DESTINATIONS = [
   {:arrive_date => Date.new(2013,9,14), :leave_date => Date.new(2013,9,14), :location => 'Singapore'},
   {:arrive_date => Date.new(2013,9,15), :leave_date => Date.new(2013,9,16), :location => 'Melbourne'},
 ]
+
+Travel.create(:departure => DateTime.new(2013,8,30,11,0,0),
+  :arrival => DateTime.new(2013,8,31,1,10,0),
+  :number => 'JQ7',
+  :mode => 'flying',
+  :stopover => 'Singapore')
 
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
@@ -41,5 +50,7 @@ end
   Day.create(:date => START_DATE + day_number,
     :day_number => day_number + 1,
     :start_location => start_location(day_number),
-    :end_location => end_location(day_number))
+    :end_location => end_location(day_number),
+    :travel => Travel.first)
+
 end
