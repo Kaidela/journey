@@ -40,6 +40,15 @@ Travel.create(:departure => DateTime.new(2013,9,14,2,40,0),
 Accomodation.create(:arrival => Date.new(2013,8,31),
   :departure => Date.new(2013,9,4),
   :name => 'Hutongren Courtyard Hotel')
+Accomodation.create(:arrival => Date.new(2013,9,5),
+  :departure => Date.new(2013,9,7),
+  :name => 'Zuo You Ke Theme Hotel')
+Accomodation.create(:arrival => Date.new(2013,9,7),
+  :departure => Date.new(2013,9,11),
+  :name => 'Quintet Bed & Breakfast')
+Accomodation.create(:arrival => Date.new(2013,9,11),
+  :departure => Date.new(2013,9,14),
+  :name => ' The Orchid Hotel')
 
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
