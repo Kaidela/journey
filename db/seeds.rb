@@ -46,9 +46,12 @@ def end_location(day_number)
   end
 end
 
-def travel_departure(day_number)
+def day_travel(day_number)
   day = START_DATE + day_number
-  
+  day_travels = Travel.select do |travel|
+    day == travel.departure.to_date
+  end
+  return day_travels.first
 end
 
 (0...17).each do |day_number|
@@ -56,6 +59,6 @@ end
     :day_number => day_number + 1,
     :start_location => start_location(day_number),
     :end_location => end_location(day_number),
-    :travel => Travel.first)
+    :travel => day_travel(day_number))
 
 end

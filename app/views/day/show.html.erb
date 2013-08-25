@@ -4,9 +4,9 @@
 	<p><strong><%= day_locations(@day) %></strong></p>
 	
 	<% if @day.travel.present? %>
-		<p><strong>We're <%= @day.travel.mode %>:</strong><%= @day.travel.number %></p>
-		<p><strong>Our Pitstop:</strong><%= @day.travel.stopover %></p>
-		<p><strong>We'll Be There By:</strong><%= @day.travel.arrival %></p>
+		<p><strong>We're <%= @day.travel.mode %>: </strong><%= @day.travel.number %> - departing @ <%= @day.travel.departure.strftime("%I:%M%p") %></p>
+		<p><strong>Our Pitstop: </strong><%= @day.travel.stopover %></p>
+		<p><strong>We'll Be There By: </strong><%= @day.travel.arrival.strftime("%I:%M%p") %></p>
 	<% end %>
 
 	<p><strong>We're Staying At:</strong></p>
