@@ -7,15 +7,34 @@ DESTINATIONS = [
   {:arrive_date => Date.new(2013,8,31), :leave_date => Date.new(2013,9,4), :location => 'Beijing'},
   {:arrive_date => Date.new(2013,9,5), :leave_date => Date.new(2013,9,7), :location => 'Xi\'an'},
   {:arrive_date => Date.new(2013,9,7), :leave_date => Date.new(2013,9,11), :location => 'Shanghai'},
-  {:arrive_date => Date.new(2013,9,11), :leave_date => Date.new(2013,9,13), :location => 'Beijing'},
-  {:arrive_date => Date.new(2013,9,14), :leave_date => Date.new(2013,9,14), :location => 'Singapore'},
+  {:arrive_date => Date.new(2013,9,11), :leave_date => Date.new(2013,9,14), :location => 'Beijing'},
   {:arrive_date => Date.new(2013,9,15), :leave_date => Date.new(2013,9,16), :location => 'Melbourne'},
 ]
 
 Travel.create(:departure => DateTime.new(2013,8,30,11,0,0),
   :arrival => DateTime.new(2013,8,31,1,10,0),
   :number => 'JQ7',
-  :mode => 'flying',
+  :mode => 'Flying',
+  :stopover => 'Singapore')
+Travel.create(:departure => DateTime.new(2013,9,4,20,30,0),
+  :arrival => DateTime.new(2013,9,5,9,0,0),
+  :number => 'T43',
+  :mode => 'Training',
+  :stopover => nil)
+Travel.create(:departure => DateTime.new(2013,9,7,12,15,0),
+  :arrival => DateTime.new(2013,9,7,14,15,0),
+  :number => 'CA1215',
+  :mode => 'Flying',
+  :stopover => nil)
+Travel.create(:departure => DateTime.new(2013,9,11,16,55,0),
+  :arrival => DateTime.new(2013,9,11,19,15,0),
+  :number => ' CA1518',
+  :mode => 'Flying',
+  :stopover => nil)
+Travel.create(:departure => DateTime.new(2013,9,14,2,40,0),
+  :arrival => DateTime.new(2013,9,15,6,45,0),
+  :number => ' CJQ8',
+  :mode => 'Flying',
   :stopover => 'Singapore')
 
 def destinations_for_day(day)
