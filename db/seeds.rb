@@ -37,6 +37,10 @@ Travel.create(:departure => DateTime.new(2013,9,14,2,40,0),
   :mode => 'Flying',
   :stopover => 'Singapore')
 
+Accomodation.create(:arrival => Date.new(2013,8,31),
+  :departure => Date.new(2013,9,4),
+  :name => 'Hutongren Courtyard Hotel')
+
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
     day >= destination[:arrive_date] and day <= destination[:leave_date]
@@ -73,11 +77,20 @@ def day_travel(day_number)
   return day_travels.first
 end
 
+def day_accomodation(day_number)
+  day = START_DATE + day_number
+  day_accomodations = Accomodation.select do |accomodation|
+    day >= accomodation.arrival and day <= accomodation.departure
+  end
+  return day_accomodations.first
+end
+
 (0...17).each do |day_number|
   Day.create(:date => START_DATE + day_number,
     :day_number => day_number + 1,
     :start_location => start_location(day_number),
     :end_location => end_location(day_number),
-    :travel => day_travel(day_number))
+    :travel => day_travel(day_number),
+    :accomodation => day_accomodation(day_number))
 
 end

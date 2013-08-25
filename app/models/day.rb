@@ -1,5 +1,6 @@
 class Day < ActiveRecord::Base
   belongs_to :travel
+  belongs_to :accomodation
   def human_day_number
     day_number.to_words.humanize
   end

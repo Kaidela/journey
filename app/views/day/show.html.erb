@@ -11,5 +11,7 @@
 		<p><strong>We'll Be There By: </strong><%= @day.travel.arrival.strftime("%I:%M%p") %></p>
 	<% end %>
 
-	<p><strong>We're Staying At:</strong></p>
+	<% if @day.accomodation.present? %>
+		<p><strong>We're Staying At: <%= @day.accomodation.name %></strong></p>
+	<% end %>	
 </div>
