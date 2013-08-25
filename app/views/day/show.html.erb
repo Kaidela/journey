@@ -1,5 +1,13 @@
 <div>
 	<h2 class="inline">Day <%= @day.human_day_number %></h2>
-	<p> <%= @day.human_date %> </p>
-	<p> <%= day_locations(@day) %></p>
+	<p class="inline"> <%= @day.human_date %> </p>
+	<p><strong><%= day_locations(@day) %></strong></p>
+	
+	<% if @day.travel.present? %>
+		<p><strong>We're <%= @day.travel.mode %>:</strong><%= @day.travel.number %></p>
+		<p><strong>Our Pitstop:</strong><%= @day.travel.stopover %></p>
+		<p><strong>We'll Be There By:</strong><%= @day.travel.arrival %></p>
+	<% end %>
+
+	<p><strong>We're Staying At:</strong></p>
 </div>

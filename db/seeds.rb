@@ -46,6 +46,11 @@ def end_location(day_number)
   end
 end
 
+def travel_departure(day_number)
+  day = START_DATE + day_number
+  
+end
+
 (0...17).each do |day_number|
   Day.create(:date => START_DATE + day_number,
     :day_number => day_number + 1,
