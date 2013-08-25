@@ -80,7 +80,7 @@ end
 def day_accomodation(day_number)
   day = START_DATE + day_number
   day_accomodations = Accomodation.select do |accomodation|
-    day >= accomodation.arrival and day <= accomodation.departure
+    day >= accomodation.arrival and day < accomodation.departure
   end
   return day_accomodations.first
 end
