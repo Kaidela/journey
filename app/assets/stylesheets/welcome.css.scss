@@ -1,3 +1,15 @@
+@font-face {
+	font-family: Museo;
+	src: url('Museo500-Regular.OTF');
+}
+
+body {
+	background-color: 	#E0E4CC;
+	font-family: Museo;
+	color: 	#4D4D4D;
+
+}
+
 .day-card {
 	background-color: #E0E4CC;
 
@@ -15,7 +27,7 @@
 }
 
 .day-card.expanded{
-	height: 250px;
+	height: 300px;
 	overflow: hidden;
 
 	transition: height 1s;
@@ -60,4 +72,24 @@
 }
 .past {
 	background-color: #FA6900;
+}
+
+button {
+	background: #FA6900;
+	border: 1px solid #FFFFFF;
+	font-family: Museo;
+	color: #FFFFFF;
+	text-shadow: 0 0 5px rgba(0,0,0,0.25);
+
+	&:hover {
+		background: #F38630;
+		font-family: Museo;
+		color: #FFFFFF;	
+	}
+	&:disabled {
+		background: #EDB080;
+		font-family: Museo;
+		color: #FFFFFF;
+		border-color: #FFFFFF;
+	}
 }

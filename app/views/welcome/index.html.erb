@@ -7,14 +7,28 @@
 			<div class= "day-card-expanded">
 				<div class="day-card-header row">
 					<h1 class="inline">Journey</h1>
-					<h2 class="inline">- Ryan and Sarah</h2>
-					<p class="inline">Go to China...</p>
+					<h2 class="inline">- Ryan and Sarah </h2>
+					<h3 class="inline"> Go to China...</h3>
 				</div>
 				<div class="day-card-body row">
 					<h2 class="inline">Day <%= day.human_day_number %></h2>
-					<p> <%= day.human_date %> </p>
+					<p class="inline"> - <%= day.human_date %> </p>
 					<p> <%= day_locations(day) %></p>
-					<p><a href="<%= day_url(day) %>">See More</a></p>
+
+					<% if day.travel.present? %>
+						<p><strong>We're <%= day.travel.mode %>: </strong><%= day.travel.number %> - departing @ <%= day.travel.departure.strftime("%I:%M%p") %></p>
+						<% if day.travel.stopover.present? %>
+							<p><strong>Our Pitstop: </strong><%= day.travel.stopover %></p>
+						<% end %>
+						<p><strong>We'll Be There By: </strong><%= day.travel.arrival.strftime("%I:%M%p") %></p>
+					<% end %>
+
+					<% if day.accomodation.present? %>
+						<p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
+					<% end %>
+					<p>
+						<a href="<%= day_url(day) %>"><button>See More</button></a>
+					</p>
 				</div>
 			</div>
 		</div>
