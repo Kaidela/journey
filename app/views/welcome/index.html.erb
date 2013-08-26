@@ -14,7 +14,7 @@
 					<h2 class="inline">Day <%= day.human_day_number %></h2>
 					<p class="inline"> - <%= day.human_date %> </p>
 					<p> <%= day_locations(day) %></p>
-
+				<div class="day-card-details row">
 					<% if day.travel.present? %>
 						<p><strong>We're <%= day.travel.mode %>: </strong><%= day.travel.number %> - departing @ <%= day.travel.departure.strftime("%I:%M%p") %></p>
 						<% if day.travel.stopover.present? %>
@@ -26,6 +26,7 @@
 					<% if day.accomodation.present? %>
 						<p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
 					<% end %>
+				</div>
 					<p>
 						<a href="<%= day_url(day) %>"><button>See More</button></a>
 					</p>

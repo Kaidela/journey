@@ -7,7 +7,14 @@ body {
 	background-color: 	#E0E4CC;
 	font-family: Museo;
 	color: 	#4D4D4D;
-
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 5px;
+		line-height: 30px;
+	}
+	p {
+		margin-bottom: 5px;
+		line-height: 15px;
+	}
 }
 
 .day-card {
@@ -27,7 +34,7 @@ body {
 }
 
 .day-card.expanded{
-	height: 300px;
+	height: 250px;
 	overflow: hidden;
 
 	transition: height 1s;
@@ -72,6 +79,15 @@ body {
 }
 .past {
 	background-color: #FA6900;
+}
+
+.day-card-header {
+	padding-top: 10px;
+}
+
+.day-card-details {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 button {
