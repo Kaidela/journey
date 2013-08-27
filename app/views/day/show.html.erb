@@ -15,6 +15,10 @@
 		<% if @day.accomodation.present? %>
 			<p><strong>We're Staying At:</strong> <%= @day.accomodation.name %></p>
 		<% end %>
+		<h2>Our Update</h2>
+		<p><strong>We Did: </strong><%= @day.trip_update.doing %><p>
+		<p><strong>We Ate: </strong><%= @day.trip_update.eating %><p>
+		<p><strong>Our Highlights: </strong><%= @day.trip_update.highlights %><p>
 	</div>	
 	<div class="two thirds">1st
 	</div>

@@ -1,5 +1,6 @@
 Day.delete_all
 Travel.delete_all
+TripUpdate.delete_all
 
 START_DATE = Date.new(2013,8,30)
 DESTINATIONS = [
@@ -50,6 +51,14 @@ Accomodation.create(:arrival => Date.new(2013,9,11),
   :departure => Date.new(2013,9,14),
   :name => ' The Orchid Hotel')
 
+TripUpdate.create(:day => Date.new(2013,8,30),
+  :doing => 'stuff and things.',
+  :eating => 'nom nom nom',
+  :highlights => 'OMG! STUFF!',
+  :image_1 => nil,
+  :image_2 => nil,
+  :image_3 => nil)
+
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
     day >= destination[:arrive_date] and day <= destination[:leave_date]
@@ -94,12 +103,21 @@ def day_accomodation(day_number)
   return day_accomodations.first
 end
 
+def day_trip_update(day_number)
+  day = START_DATE + day_number
+  day_trip_updates = TripUpdate.select do |trip_update|
+    day == trip_update.day
+  end
+  return day_trip_updates.first
+end
+
 (0...17).each do |day_number|
   Day.create(:date => START_DATE + day_number,
     :day_number => day_number + 1,
     :start_location => start_location(day_number),
     :end_location => end_location(day_number),
     :travel => day_travel(day_number),
-    :accomodation => day_accomodation(day_number))
+    :accomodation => day_accomodation(day_number),
+    :trip_update => day_trip_update(day_number))
 
 end
