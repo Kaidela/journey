@@ -1,17 +1,21 @@
-<div>
-	<h2 class="inline">Day <%= @day.human_day_number %></h2>
-	<p class="inline"> <%= @day.human_date %> </p>
-	<p><strong><%= day_locations(@day) %></strong></p>
-	
-	<% if @day.travel.present? %>
-		<p><strong>We're <%= @day.travel.mode %>: </strong><%= @day.travel.number %> - departing @ <%= @day.travel.departure.strftime("%I:%M%p") %></p>
-		<% if @day.travel.stopover.present? %>
-			<p><strong>Our Pitstop: </strong><%= @day.travel.stopover %></p>
+<div class="padded container row">
+  <div class="one third">
+		<h2 class="inline">Day <%= @day.human_day_number %></h2>
+		<p class="inline"> <%= @day.human_date %> </p>
+		<p><strong><%= day_locations(@day) %></strong></p>
+		
+		<% if @day.travel.present? %>
+			<p><strong>We're <%= @day.travel.mode %>: </strong><%= @day.travel.number %> - departing @ <%= @day.travel.departure.strftime("%I:%M%p") %></p>
+			<% if @day.travel.stopover.present? %>
+				<p><strong>Our Pitstop: </strong><%= @day.travel.stopover %></p>
+			<% end %>
+			<p><strong>We'll Be There By: </strong><%= @day.travel.arrival.strftime("%I:%M%p") %></p>
 		<% end %>
-		<p><strong>We'll Be There By: </strong><%= @day.travel.arrival.strftime("%I:%M%p") %></p>
-	<% end %>
 
-	<% if @day.accomodation.present? %>
-		<p><strong>We're Staying At:</strong> <%= @day.accomodation.name %></p>
-	<% end %>	
+		<% if @day.accomodation.present? %>
+			<p><strong>We're Staying At:</strong> <%= @day.accomodation.name %></p>
+		<% end %>
+	</div>	
+	<div class="two thirds">1st
+	</div>
 </div>
