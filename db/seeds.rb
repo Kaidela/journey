@@ -51,13 +51,13 @@ Accomodation.create(:arrival => Date.new(2013,9,11),
   :departure => Date.new(2013,9,14),
   :name => ' The Orchid Hotel')
 
-TripUpdate.create(:day => Date.new(2013,8,30),
-  :doing => 'stuff and things.',
-  :eating => 'nom nom nom',
-  :highlights => 'OMG! STUFF!',
-  :image_1 => nil,
-  :image_2 => nil,
-  :image_3 => nil)
+# TripUpdate.create(:day => Date.new(2013,8,30),
+#   :doing => nil,
+#   :eating => nil,
+#   :highlights => nil,
+#   :image_1 => nil,
+#   :image_2 => nil,
+#   :image_3 => nil)
 
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|

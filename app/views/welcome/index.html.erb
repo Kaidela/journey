@@ -29,6 +29,7 @@
 							<% if day.accomodation.present? %>
 								<p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
 							<% end %>
+							<br>
 							<p>
 								<a href="<%= day_url(day) %>"><button <%= day_update_state(day) %>>Our Update</button></a>
 							</p>

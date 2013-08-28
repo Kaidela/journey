@@ -1,8 +1,9 @@
 <div class= "background-container <%= day_detail_class(@day) %>">
 	<div class="padded container row">
 	  <div class="one third">
-			<h2 class="inline">Day <%= @day.human_day_number %></h2>
-			<p class="inline"> <%= @day.human_date %> </p>
+			<h2>Day <%= @day.human_day_number %></h2>
+			<p> <%= @day.human_date %> </p>
+			<br>
 			<p><strong><%= day_locations(@day) %></strong></p>
 			
 			<% if @day.travel.present? %>
@@ -16,7 +17,7 @@
 			<% if @day.accomodation.present? %>
 				<p><strong>We're Staying At:</strong> <%= @day.accomodation.name %></p>
 			<% end %>
-
+			<br>
 			<% if @day.trip_update.present? %>
 				<h2>Our Update</h2>
 				<p><strong>We Did: </strong><%= @day.trip_update.doing %><p>
@@ -24,7 +25,7 @@
 				<p><strong>Our Highlights: </strong><%= @day.trip_update.highlights %><p>
 			<% end %>
 		</div>	
-		<div class="two thirds">1st
+		<div class="two thirds">
 		</div>
 	</div>
 </div>
