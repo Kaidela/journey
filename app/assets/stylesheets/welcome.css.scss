@@ -114,6 +114,12 @@ button {
 	width: 280px;
 	height: 94px;
 }
+.image {
+	display: block;
+  	box-shadow: 3px 3px 3px #3E3E3E;
+  	-moz-box-shadow: 3px 3px 3px #3E3E3E;
+  	-webkit-box-shadow: 3px 3px 3px #3E3E3E;
+}
 
 .headline {
 	vertical-align: top;
