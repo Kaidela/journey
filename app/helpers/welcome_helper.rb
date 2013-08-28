@@ -12,6 +12,7 @@ module WelcomeHelper
   end
 
   def day_view(day)
+    puts day.date
     if day.is_current?
       'today'
     elsif day.is_tomorrow?
