@@ -7,9 +7,9 @@
 				</div>
 				<div class= "day-card-expanded">
 					<div class="day-card-header row">
-						<h1 class="inline">Journey</h1>
-						<h2 class="inline">- Ryan and Sarah </h2>
-						<h3 class="inline"> Go to China...</h3>
+						<img class="inline logo" src="assets/Journey_Logo.png"/>
+						<h2 class="inline headline">- Ryan and Sarah </h2>
+						<h3 class="inline sub-headline"> Go to China...</h3>
 					</div>
 					<div class="day-card-body row">
 						<h2 class="inline">Day <%= day.human_day_number %></h2>
@@ -29,7 +29,7 @@
 						<% end %>
 					</div>
 						<p>
-							<a href="<%= day_url(day) %>"><button>See More</button></a>
+							<a href="<%= day_url(day) %>"><button <%= day_update_state(day) %>>Our Update</button></a>
 						</p>
 					</div>
 				</div>

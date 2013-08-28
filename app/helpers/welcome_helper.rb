@@ -32,5 +32,10 @@ module WelcomeHelper
       day.start_location
     end
   end
+  def day_update_state(day)
+    if day.trip_update.nil?
+      return 'disabled'
+    end
+  end
 end
 
