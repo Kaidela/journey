@@ -55,17 +55,25 @@ TripUpdate.create(:day => Date.new(2013,8,30),
    :doing => 'Traveling.',
    :eating => 'Plane food, yum!',
    :highlights => 'Ryan says "watching the whole first season of Breaking Bad and still have 30% battery left".')
-#   :image_1 => nil,
-#   :image_2 => nil,
-#   :image_3 => nil)
+   #:image_1 => nil,
+   #:image_2 => nil,
+   #:image_3 => nil)
 
 TripUpdate.create(:day => Date.new(2013,8,31),
    :doing => 'Sightseeing at the Forbidden City & Tiananmen Square.',
    :eating => 'Breakfast and lunch at a great cafe down the lane from our hotel. Downside is that the average price for a latte over here is 45Y!',
-   :highlights => 'Getting from one end to the other of the Forbidden City! We walked about 15km in total... NOTE: No photos yet as we forgot the adapter, got to go shopping!')
-#   :image_1 => nil,
-#   :image_2 => nil,
-#   :image_3 => nil)
+   :highlights => 'Getting from one end to the other of the Forbidden City! We walked about 15km in total...',
+   :image_1 => 'Day2_Img1.jpg',
+   :image_2 => 'Day2_Img2.jpg',
+   :image_3 => 'Day2_Img3.jpg')
+
+TripUpdate.create(:day => Date.new(2013,9,1),
+   :doing => 'We cycled around the city. I am still alive Mum!',
+   :eating => 'Some awesome street food. Had the best egg tart type things and some tasty - I assume - chicken.',
+   :highlights => 'Staying alive despite the rather loose grasp on the road rules that the locals seem to have! Oh, and I bought an ocarina!',
+   :image_1 => 'Day3_Img1.jpg',
+   :image_2 => 'Day3_Img2.jpg',
+   :image_3 => 'Day3_Img3.jpg')
 
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
