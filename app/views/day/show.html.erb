@@ -26,10 +26,10 @@
 			<% end %>
 		</div>	
 		<div class="two thirds">
-			<% if @day.image_1.present? %>
-				<img class="centered image" src="<%= asset_path @day.image_1 %>">
-				<img class="centered image" src="<%= asset_path @day.image_2 %>">
-				<img class="centered image" src="<%= asset_path @day.image_3 %>">
+			<% if @day.trip_update.image_1.present? %>
+				<img class="centered image" src="<%= asset_path @day.trip_update.image_1 %>">
+				<img class="centered image" src="<%= asset_path @day.trip_update.image_2 %>">
+				<img class="centered image" src="<%= asset_path @day.trip_update.image_3 %>">
 			<% end %>
 		</div>
 	</div>
