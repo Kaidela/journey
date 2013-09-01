@@ -1,0 +1,6 @@
+rm -rf ./public/assets
+rake assets:precompile RAILS_ENV=production
+
+== COMMIT AND PUSH ==
+
+Optionally run: heroku run rake db:seed
