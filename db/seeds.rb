@@ -51,10 +51,18 @@ Accomodation.create(:arrival => Date.new(2013,9,11),
   :departure => Date.new(2013,9,14),
   :name => ' The Orchid Hotel')
 
-# TripUpdate.create(:day => Date.new(2013,8,30),
-#   :doing => nil,
-#   :eating => nil,
-#   :highlights => nil,
+TripUpdate.create(:day => Date.new(2013,8,30),
+   :doing => 'Traveling.',
+   :eating => 'Plane food, yum!',
+   :highlights => 'Ryan says "watching the whole first season of Breaking Bad and still have 30% battery left".')
+#   :image_1 => nil,
+#   :image_2 => nil,
+#   :image_3 => nil)
+
+TripUpdate.create(:day => Date.new(2013,8,31),
+   :doing => 'Sightseeing at the Forbidden City & Tiananmen Square.',
+   :eating => 'Breakfast and lunch at a great cafe down the lane from our hotel. Downside is that the average price for a latte over here is 45Y!',
+   :highlights => 'Getting from one end to the other of the Forbidden City! We walked about 15km in total... NOTE: No photos yet as we forgot the adapter, got to go shopping!')
 #   :image_1 => nil,
 #   :image_2 => nil,
 #   :image_3 => nil)
