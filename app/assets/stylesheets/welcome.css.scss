@@ -34,13 +34,14 @@ body {
 }
 
 .day-card.expanded{
-	min-height: 320px;
+	max-height: 552px;
+
 	overflow: hidden;
 
-	transition: height 1s;
-	-webkit-transition: height 1s;
-	-o-transition: height 1s;
-	-moz-transition: height 1s;
+	transition: 1s ease-out;
+	-webkit-transition: 1s ease-out;
+	-o-transition: 1s ease-out;
+	-moz-transition: 1s ease-out;
 }
 
 .day-card-collapsed{
