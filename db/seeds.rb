@@ -75,6 +75,14 @@ TripUpdate.create(:day => Date.new(2013,9,1),
    :image_2 => 'Day3_Img2.jpg',
    :image_3 => 'Day3_Img3.jpg')
 
+TripUpdate.create(:day => Date.new(2013,9,2),
+   :doing => 'We travelled up to the Great Wall at Badaling and went for one hell of a walk.',
+   :eating => 'Some more street food. I had to try very hard not to think about what the meat was in some cases. Bonus: I have convinced Ryan to eat a scorpion!',
+   :highlights => 'Making it up to the peak of the wall. We took the south route as it was less busy... The +60 degree incline was the reason it was less busy!',
+   :image_1 => 'Day4_Img1.jpg',
+   :image_2 => 'Day4_Img2.jpg',
+   :image_3 => 'Day4_Img3.jpg')
+
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
     day >= destination[:arrive_date] and day <= destination[:leave_date]
