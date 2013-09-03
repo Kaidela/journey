@@ -83,6 +83,14 @@ TripUpdate.create(:day => Date.new(2013,9,2),
    :image_2 => 'Day4_Img2.jpg',
    :image_3 => 'Day4_Img3.jpg')
 
+TripUpdate.create(:day => Date.new(2013,9,3),
+   :doing => 'We did some more walking at the Summer Palace and then headed out for some late night shopping (which is every night!).',
+   :eating => 'Ryan found the Chinese Bread Top and ate like a fatty.',
+   :highlights => 'Getting back onto the MRT after the mugginess of the Summer Palace. Plus I bought socks and we discovered the largest EVER book store! Downside: it was all in Chinese... Go figure.',
+   :image_1 => 'Day5_Img1.jpg',
+   :image_2 => 'Day5_Img2.jpg',
+   :image_3 => 'Day5_Img3.jpg')
+
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
     day >= destination[:arrive_date] and day <= destination[:leave_date]
