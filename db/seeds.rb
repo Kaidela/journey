@@ -91,6 +91,14 @@ TripUpdate.create(:day => Date.new(2013,9,3),
    :image_2 => 'Day5_Img2.jpg',
    :image_3 => 'Day5_Img3.jpg')
 
+TripUpdate.create(:day => Date.new(2013,9,4),
+   :doing => 'We had a lazy day wandering around Beijing Zoo and Aquarium before heading to Beijing West Station to catch the overnight trian.',
+   :eating => 'We chilled out with afternoon waffles at Peking Cafe, a great French style cafe just down from out hotel.',
+   :highlights => 'While the zoo was a little under-whelming and mildly depressing the aqaurium was amazing!',
+   :image_1 => 'Day6_Img1.jpg',
+   :image_2 => 'Day6_Img2.jpg',
+   :image_3 => 'Day6_Img3.jpg')
+
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
     day >= destination[:arrive_date] and day <= destination[:leave_date]
