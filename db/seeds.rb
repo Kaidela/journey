@@ -115,7 +115,7 @@ TripUpdate.create(:day => Date.new(2013,9,6),
    :image_2 => 'Day8_Img2.jpg',
    :image_3 => 'Day8_Img3.jpg')
 
-TripUpdate.create(:day => Date.new(2013,9,6),
+TripUpdate.create(:day => Date.new(2013,9,7),
    :doing => 'We travelled from Xian to Shanghai today (I would reccomend Air China) and then had a relaxing evening at our hotel watching the ABC 24 election coverage before heading out for a wander.',
    :eating => 'We popped into a Japanese place down the road and shared some rice and dumplings. And by shared I meant Ryan ate most of them without noticing before I had even eaten my second...',
    :highlights => 'We took the Maglev train into Shanghai from the station. It has a top speed of 431km/h and was completely terrifying. Ryan loved it obviously! :) NOTE: Sorry, another no photo day so here\'s some more rejects.',
