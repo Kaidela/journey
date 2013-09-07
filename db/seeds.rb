@@ -92,12 +92,36 @@ TripUpdate.create(:day => Date.new(2013,9,3),
    :image_3 => 'Day5_Img3.jpg')
 
 TripUpdate.create(:day => Date.new(2013,9,4),
-   :doing => 'We had a lazy day wandering around Beijing Zoo and Aquarium before heading to Beijing West Station to catch the overnight trian.',
+   :doing => 'We had a lazy day wandering around Beijing Zoo and Aquarium before heading to Beijing West Station to catch the overnight train.',
    :eating => 'We chilled out with afternoon waffles at Peking Cafe, a great French style cafe just down from out hotel.',
    :highlights => 'While the zoo was a little under-whelming and mildly depressing the aqaurium was amazing!',
    :image_1 => 'Day6_Img1.jpg',
    :image_2 => 'Day6_Img2.jpg',
    :image_3 => 'Day6_Img3.jpg')
+
+TripUpdate.create(:day => Date.new(2013,9,5),
+   :doing => 'We arrived in Xian after having a rough sleep on the overnight train. We then got completely lost finding our hotel but got helped out by a local expat, and ended up having an awesome night out with the local expat community.',
+   :eating => 'We ate noodles for dinner around midnight at a street vendor set up in the middle of an intersection.',
+   :highlights => 'Meeting the local expat community and learning a few helpful phrases over a few too many beers. NOTE: No photos for today so instead some from previous days that did\'t make the cut.',
+   :image_1 => 'Day7_Img1.jpg',
+   :image_2 => 'Day7_Img2.jpg',
+   :image_3 => 'Day7_Img3.jpg')
+
+TripUpdate.create(:day => Date.new(2013,9,6),
+   :doing => 'We had a huge day! First we went to the Terracotta Warriors, then walked through Xian seeing the Bell Tower and Muslim Street, then we hired bikes and road around the city walls!',
+   :eating => 'We found a place near our hotel that serves some of the most awesome rice dishes. Conveniently it\'s also right next to an ice cream shop!',
+   :highlights => 'Definitely seeing the Terracotta Warriors (so much bigger than you\'d think). Plus the accomplishment of riding the whole city wall was pretty good.',
+   :image_1 => 'Day8_Img1.jpg',
+   :image_2 => 'Day8_Img2.jpg',
+   :image_3 => 'Day8_Img3.jpg')
+
+TripUpdate.create(:day => Date.new(2013,9,6),
+   :doing => 'We travelled from Xian to Shanghai today (I would reccomend Air China) and then had a relaxing evening at our hotel watching the ABC 24 election coverage before heading out for a wander.',
+   :eating => 'We popped into a Japanese place down the road and shared some rice and dumplings. And by shared I meant Ryan ate most of them without noticing before I had even eaten my second...',
+   :highlights => 'We took the Maglev train into Shanghai from the station. It has a top speed of 431km/h and was completely terrifying. Ryan loved it obviously! :) NOTE: Sorry, another no photo day so here\'s some more rejects.',
+   :image_1 => 'Day9_Img1.jpg',
+   :image_2 => 'Day9_Img2.jpg',
+   :image_3 => 'Day9_Img3.jpg')
 
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
