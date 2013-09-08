@@ -123,6 +123,15 @@ TripUpdate.create(:day => Date.new(2013,9,7),
    :image_2 => 'Day9_Img2.jpg',
    :image_3 => 'Day9_Img3.jpg')
 
+TripUpdate.create(:day => Date.new(2013,9,8),
+   :doing => 'We spent the better part of the day exploring the Old Town, including the Confusious Temple, and then went for a nice walk along The Bund in the evening.',
+   :eating => 'We found a Coco\'s Curry, which is a Japanese Curry Chain, near The Bund for dinner.',
+   :highlights => 'Today was just about absorbing Shanghai. It is amazing how different it is in each area!',
+   :image_1 => 'Day10_Img1.jpg',
+   :image_2 => 'Day10_Img2.jpg',
+   :image_3 => 'Day10_Img3.jpg')
+
+
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
     day >= destination[:arrive_date] and day <= destination[:leave_date]
