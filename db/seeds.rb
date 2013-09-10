@@ -131,6 +131,21 @@ TripUpdate.create(:day => Date.new(2013,9,8),
    :image_2 => 'Day10_Img2.jpg',
    :image_3 => 'Day10_Img3.jpg')
 
+TripUpdate.create(:day => Date.new(2013,9,9),
+   :doing => 'We headed to the fabric market in the morning and the headed to the propaganda art museum in the afternoon.',
+   :eating => 'We had some noodles for lunch around the corner and then some really amazing burgers for dinner.',
+   :highlights => 'The propaganda art museum was pretty interesting; so was getting there! Basically you go to this adress which is a set of apartment buildings, the gate guard gives you a card and you follow the address on it to the back of the building and take an elevator to the basement... But it was worth the creepy factor.',
+   :image_1 => 'Day11_Img1.jpg',
+   :image_2 => 'Day11_Img2.jpg',
+   :image_3 => 'Day11_Img3.jpg')
+
+TripUpdate.create(:day => Date.new(2013,9,10),
+   :doing => 'Today was opressively hot so we spent the morning chilling out wandering around the Shanghai Museum. We also checked out the Aquarium in the afternoon and then went down the road for a foot massage after dinner.',
+   :eating => 'We had some Hong Kong style noodles for lunch and then went to the Mexican place down the road for dinner.',
+   :highlights => 'The highlight for today was every minute we spent in air-con. The epic storm we had in the afternoon was pretty cool but didn\'t bring a cool change with it.',
+   :image_1 => 'Day12_Img1.jpg',
+   :image_2 => 'Day12_Img2.jpg',
+   :image_3 => 'Day12_Img3.jpg')
 
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
