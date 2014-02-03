@@ -3,8 +3,6 @@ development:
   encoding: unicode
   pool: 5
   host: localhost
-  username: postgres
-  password: china
   database: journey_development
 
 # Warning: The database defined as "test" will be erased and
@@ -15,8 +13,6 @@ test:
   encoding: unicode
   pool: 5
   host: localhost
-  username: postgres
-  password: china
   database: journey_test
 
 production:
