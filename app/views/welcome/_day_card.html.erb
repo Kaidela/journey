@@ -27,9 +27,12 @@
 					<p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
 				<% end %>
 				<br>
-				<p>
-					<a href="<%= day_url(day) %>"><button <%= day_update_state(day) %>>Our Update</button></a>
-				</p>
+				<% if day.trip_update.present? %>
+					<h2>Our Update</h2>
+					<p><strong>We Did: </strong><%= day.trip_update.doing %><p>
+					<p><strong>We Ate: </strong><%= day.trip_update.eating %><p>
+					<p><strong>Our Highlights: </strong><%= day.trip_update.highlights %><p>
+				<% end %>
 			</div>
 		</div>
 		<div class="one third">
