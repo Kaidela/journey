@@ -1,0 +1,39 @@
+<div class="day-card <%= day_state(day) %> <%= day_view(day) %> padded" style="z-index: <%= day_order(day) %> ">
+	<div class="day-card-collapsed row">
+		<h2 class="inline"> Day <%= day.human_day_number %> </h2>
+	</div>
+	<div class= "day-card-expanded row">
+		<div class= "two thirds">
+			<div class="day-card-header row">
+				<img class="inline logo" src="<%= asset_path 'Journey_Logo.png' %>"/>
+				<h2 class="inline headline">- Ryan and Sarah </h2>
+				<h3 class="inline sub-headline"> Go to China...</h3>
+			</div>
+			<div class="day-card-body row">
+				<h2 class="inline">Day <%= day.human_day_number %></h2>
+				<p class="inline"> - <%= day.human_date %> </p>
+				<p> <%= day_locations(day) %></p>
+			</div>
+			<div class="day-card-details row">
+				<% if day.travel.present? %>
+					<p><strong>We're <%= day.travel.mode %>: </strong><%= day.travel.number %> - departing @ <%= day.travel.departure.strftime("%I:%M%p") %></p>
+					<% if day.travel.stopover.present? %>
+						<p><strong>Our Pitstop: </strong><%= day.travel.stopover %></p>
+					<% end %>
+					<p><strong>We'll Be There By: </strong><%= day.travel.arrival.strftime("%I:%M%p") %></p>
+				<% end %>
+
+				<% if day.accomodation.present? %>
+					<p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
+				<% end %>
+				<br>
+				<p>
+					<a href="<%= day_url(day) %>"><button <%= day_update_state(day) %>>Our Update</button></a>
+				</p>
+			</div>
+		</div>
+		<div class="one third">
+			<img class="centered image" src="<%= asset_path 'Polaroid_Picture.png' %>"/>
+		</div>
+	</div>
+</div>
