@@ -2,6 +2,7 @@ class Day < ActiveRecord::Base
   belongs_to :travel
   belongs_to :accomodation
   belongs_to :trip_update
+  has_many :comments
   def human_day_number
     day_number.to_words.humanize
   end
