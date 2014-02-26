@@ -34,6 +34,7 @@
 					<p><strong>Our Highlights: </strong><%= day.trip_update.highlights %><p>
 				<% end %>
 			</div>
+			<%= render partial: "day_comments", locals:{day: day} %>
 		</div>
 		<div class="one third">
 			<img class="centered image" src="<%= asset_path 'Polaroid_Picture.png' %>"/>

@@ -1,0 +1,10 @@
+<div class="day-card-comments">
+	<% day.comments.each do |comment| %>
+		<p>Name: <%= comment.name %>
+		</p>
+		<p>Email: <%= comment.email %>
+		</p>
+		<p>Comment: <%= comment.body %>
+		</p>
+	<% end %>
+</div>
