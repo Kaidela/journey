@@ -1,11 +1,13 @@
 <div class="day-card-comments">
-	<% day.comments.each do |comment| %>
-		<p>Name: <%= comment.name %>
-		</p>
-		<p>Email: <%= comment.email %>
-		</p>
-		<p>Comment: <%= comment.body %>
-		</p>
-	<% end %>
+	<div class="day-comments-list">
+		<% day.comments.each do |comment| %>
+			<p>Name: <%= comment.name %>
+			</p>
+			<p>Email: <%= comment.email %>
+			</p>
+			<p>Comment: <%= comment.body %>
+			</p>
+		<% end %>
+	</div>
 	<%= render partial: "day_create_comment", locals:{day: day} %>
 </div>

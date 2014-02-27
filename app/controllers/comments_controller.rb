@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
 	end
 	def create
 		@comment = Comment.create(comment_params)
-		render({:nothing => true, :status => 200, :content_type => 'text/html'})
+		render(:layout => false)
 	end
 	private
 		def comment_params
