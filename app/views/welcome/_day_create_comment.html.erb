@@ -1,0 +1,10 @@
+<%= form_tag(:controller => "comments",:action => "create",:day_id => day.id) do %>
+	<%= label_tag(:name) %>
+	<%= text_field(:comment,:name) %>
+	<%= label_tag(:email) %>
+	<%= email_field(:comment,:email) %>
+	<%= label_tag(:body) %>
+	<%= text_area(:comment,:body) %>
+	<%= hidden_field(:comment,:day_id,:value => day.id) %>
+	<%= submit_tag("Submit") %>
+<% end %>
