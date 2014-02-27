@@ -1,12 +1,13 @@
 class CommentsController < ApplicationController
 	wrap_parameters(:comment)
-	
+
 	def index 
 		@day = Day.find(params[:day_id])
 		@comments = @day.comments
 	end
 	def create
 		@comment = Comment.create(comment_params)
+		render({:nothing => true, :status => 200, :content_type => 'text/html'})
 	end
 	private
 		def comment_params
