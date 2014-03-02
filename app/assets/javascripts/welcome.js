@@ -1,7 +1,8 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
     $('.day-card').click(function() {
-    	if (!$(this).hasClass('expanded')) {
+    	var cardExpanded = $(this).hasClass('expanded');
+    	if (!cardExpanded) {
 	        $('.day-card').addClass('collapsed');
 	        $('.day-card').removeClass('expanded');
 	        $(this).addClass('expanded');
