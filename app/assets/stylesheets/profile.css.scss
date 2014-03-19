@@ -1,8 +1,24 @@
 .profile {
 	height: 100%;
 	width: 100%;
+	position: fixed;
 	background-image: asset-url('assets/IMG_1167.jpg');
 	background-color:#ffffff;
 	background-size: 100% auto;
 	background-position:center;
+}
+.profile-container {
+	height: 80%;
+	width: 80%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #ffffff;
+}
+.profile-image {
+	float: right;
 }
