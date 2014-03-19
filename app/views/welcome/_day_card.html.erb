@@ -1,6 +1,6 @@
 <div class="day-card <%= day_state(day) %> <%= day_view(day) %> padded" style="z-index: <%= day_order(day) %> ">
 	<div class="day-card-collapsed row">
-		<h2 class="inline"> Day <%= day.human_day_number %> </h2>
+		<h3 class="inline"> Day <%= day.day_number %> - <%= day_locations(day) %></h3>
 	</div>
 	<div class= "day-card-expanded row">
 		<div class= "two thirds">

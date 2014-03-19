@@ -1,11 +1,19 @@
-@font-face {
-	font-family: Museo;
-	src: asset-url("Museo500-Regular.OTF");
+.header {
+	height: 60px;
+	padding-top: 10px;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: QuicksandLight;
+	color: #ffffff;
 }
 
+@font-face {
+	font-family: QuicksandLight;
+	src: asset-url('assets/Quicksand-Light.otf');
+	}
+
 body {
-	background-color: 	#E0E4CC;
-	font-family: Museo;
+	background-color: #fffff;
+	font-family: QuicksandLight;
 	color: 	#4D4D4D;
 	h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 5px;
@@ -18,19 +26,9 @@ body {
 }
 
 .day-card {
-	background-color: #E0E4CC;
-
-	border-radius: 0px 0px 3px 3px;
-	-moz-border-radius: 0px 0px 3px 3px;
-	-webkit-border-radius: 0px 0px 3px 3px;
-
-	box-shadow: 3px 3px 3px #3E3E3E; 
-	-moz-box-shadow: 3px 3px 3px #3E3E3E; 
-	-webkit-box-shadow: 3px 3px 3px #3E3E3E;
-
-	position: relative;
-	-moz-postion: relative;
-	-webkit-postition: relative;
+	background-color: #f3f3f2;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .day-card.expanded{
@@ -45,7 +43,7 @@ body {
 }
 
 .day-card-collapsed{
-	height: 50px;
+	height: 40px;
 	overflow: hidden;
 }
 
@@ -62,24 +60,29 @@ body {
 		display: block;
 	}
 	.day-card-collapsed{
-		display: none;
+		display:none;
 	}
 }
 
 .today{
-	background-color: #E0E4CC;
+	background-color: rgba(251, 197, 153, 0.8);
+	opacity:0.8;
 }
 .tomorrow {
-	background-color: #A7DBD8;
+	background-color: rgba(226, 224, 223, 0.5);
+	color: #F35F55;
 }
 .yesterday {
-	background-color: #F38630;
+	background-color: rgba(226, 224, 223, 0.5);
+	color: #F35F55;
 }
 .future {
-	background-color: #69D2E7;
+	background-color: rgba(226, 224, 223, 0.3);
+	color: #F35F55;
 }
 .past {
-	background-color: #FA6900;
+	background-color: rgba(226, 224, 223, 0.3);
+	color: #F35F55;
 }
 
 .day-card-header {
