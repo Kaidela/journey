@@ -1,0 +1,11 @@
+<div class="header">
+	<h1>Journey</h1>
+</div>
+<div class="container">
+	<div class="day-card-list">
+		<% @days.each do |day| %>
+			<%= render partial: "day_card", locals:{day: day} %>
+		<% end %>
+	</div>
+</div>
+

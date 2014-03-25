@@ -1,11 +1,23 @@
-<div class="header">
-	<h1>Journey</h1>
-</div>
-<div class="container">
-	<div class="day-card-list">
-		<% @days.each do |day| %>
-			<%= render partial: "day_card", locals:{day: day} %>
-		<% end %>
+<div class="landing">
+	<div class="header">
+		<div class="two thirds">
+			<h1>Journey</h1>
+		</div>
+		<div class="one thrid">
+		</div>
+	</div>
+	<div class="container landing-container">
+		<div class="one half">
+			<div class="option">
+				<h2>Demo</h2>
+				<p>sample text</p>
+			</div>
+		</div>
+		<div class="one half">
+			<div class="option">
+				<h2>Blog</h2>
+				<p>sample text</p>
+			</div>
+		</div>
 	</div>
 </div>
-

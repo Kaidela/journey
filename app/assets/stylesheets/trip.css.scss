@@ -1,0 +1,139 @@
+.header {
+	height: 60px;
+	padding-top: 10px;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: QuicksandLight;
+	color: #ffffff;
+}
+
+@font-face {
+	font-family: QuicksandLight;
+	src: asset-url('assets/Quicksand-Light.otf');
+	}
+
+body {
+	background-color: #fffff;
+	font-family: QuicksandLight;
+	color: 	#4D4D4D;
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 5px;
+		line-height: 30px;
+	}
+	p {
+		margin-bottom: 5px;
+		line-height: 15px;
+	}
+}
+
+.day-card {
+	background-color: #f3f3f2;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.day-card.expanded{
+	//max-height: 1000px;
+
+	overflow: hidden;
+
+	transition: 1s ease-out;
+	-webkit-transition: 1s ease-out;
+	-o-transition: 1s ease-out;
+	-moz-transition: 1s ease-out;
+}
+
+.day-card-collapsed{
+	height: 40px;
+	overflow: hidden;
+}
+
+.collapsed{
+	.day-card-collapsed{
+		display: block;
+	}
+	.day-card-expanded{
+		display: none;
+	}
+}
+.expanded{
+	.day-card-expanded{
+		display: block;
+	}
+	.day-card-collapsed{
+		display:none;
+	}
+}
+
+.today{
+	background-color: rgba(251, 197, 153, 0.8);
+}
+.tomorrow {
+	background-color: rgba(226, 224, 223, 0.5);
+	color: #F35F55;
+}
+.yesterday {
+	background-color: rgba(226, 224, 223, 0.5);
+	color: #F35F55;
+}
+.future {
+	background-color: rgba(226, 224, 223, 0.3);
+	color: #F35F55;
+}
+.past {
+	background-color: rgba(226, 224, 223, 0.3);
+	color: #F35F55;
+}
+
+.day-card-header {
+	padding-top: 10px;
+}
+
+.day-card-details {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+button {
+	background: #FA6900;
+	border: 1px solid #FFFFFF;
+	font-family: Museo;
+	color: #FFFFFF;
+	text-shadow: 0 0 5px rgba(0,0,0,0.25);
+
+	&:hover {
+		background: #F38630;
+		font-family: Museo;
+		color: #FFFFFF;	
+	}
+	&:disabled {
+		background: #EDB080;
+		font-family: Museo;
+		color: #FFFFFF;
+		border-color: #FFFFFF;
+	}
+}
+
+.logo {
+	width: 280px;
+	height: 94px;
+}
+.image {
+	display: block;
+	
+	margin-bottom: 10px;
+	max-width: 300px;
+
+  	box-shadow: 3px 3px 3px #3E3E3E;
+  	-moz-box-shadow: 3px 3px 3px #3E3E3E;
+  	-webkit-box-shadow: 3px 3px 3px #3E3E3E;
+}
+
+.headline {
+	vertical-align: top;
+	padding-top: 30px;
+	padding-right: 10px;
+}
+.sub-headline {
+	vertical-align: top;
+	padding-top: 32px;
+}

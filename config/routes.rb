@@ -1,5 +1,7 @@
 Journey::Application.routes.draw do
+  get "welcome/index"
   get "profile" => "profile#index"
+  get "trip" => "trip#index"
   root "welcome#index"
   resources :days, :except => [:index, :new, :create, :edit, :update, :destroy, :show] do
     resources :comments
