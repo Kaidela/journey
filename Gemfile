@@ -34,6 +34,10 @@ group :development, :test do
   gem 'therubyracer', require: "v8"
 end
 
+gem 'groundworkcss'
+gem 'autoprefixer-rails'
+gem 'compass-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
