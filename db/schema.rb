@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205203251) do
+ActiveRecord::Schema.define(version: 20140519220916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,14 +57,26 @@ ActiveRecord::Schema.define(version: 20140205203251) do
     t.datetime "updated_at"
   end
 
+  create_table "trip_update_images", force: true do |t|
+    t.string   "file"
+    t.integer  "trip_update_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "trip_update_images", ["trip_update_id"], name: "index_trip_update_images_on_trip_update_id", using: :btree
+
   create_table "trip_updates", force: true do |t|
     t.date     "day"
     t.string   "doing"
     t.string   "eating"
     t.string   "highlights"
-    t.string   "image_1"
-    t.string   "image_2"
-    t.string   "image_3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trips", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
