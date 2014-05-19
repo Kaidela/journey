@@ -32,7 +32,7 @@
       <%= render partial: "day_comments", locals:{day: day} %>
     </div>
     <div class="one third">
-      <button id="photos-day-<%= day.id %>" class="day-card-photos">Photos</button>
+      <button id="photos-day-<%= day.id %>" class="day-card-photos" <%= 'disabled' unless day.trip_update.present? %> >Photos</button>
       <button>Comments</button>
     </div>
     
