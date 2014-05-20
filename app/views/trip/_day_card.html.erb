@@ -29,16 +29,18 @@
           <p><strong>Our Highlights: </strong><%= day.trip_update.highlights %><p>
         <% end %>
       </div>
-      <%= render partial: "day_comments", locals:{day: day} %>
+      <div id="comments-day-<%= day.id %>" class="white-popup mfp-hide">
+        <%= render partial: "day_comments", locals:{day: day} %>
+      </div>
     </div>
     <div class="one third">
-      <button id="photos-day-<%= day.id %>" class="day-card-photos" <%= 'disabled' unless day.trip_update.present? %> >Photos</button>
-      <button>Comments</button>
+      <button id="photos-btn-day-<%= day.id %>" class="day-card-photos" <%= 'disabled' unless day.trip_update.present? %> >Photos</button>
+      <button id="comments-btn-day-<%= day.id %>" class="day-card-comments">Comments</button>
     </div>
     
     <% if day.trip_update.present? %>
       <script type="text/javascript">
-      $('#photos-day-<%= day.id %>').magnificPopup({
+      $('#photos-btn-day-<%= day.id %>').magnificPopup({
         items: [
           <% day.trip_update.trip_update_images.each do |image| %>
             {
@@ -55,6 +57,17 @@
       </script>
 
     <% end %>
+
+    <script type="text/javascript">
+      $('#comments-btn-day-<%= day.id %>').magnificPopup({
+        items: {
+          src: '#comments-day-<%= day.id %>',
+          type: 'inline'
+        },
+        type:'inline',
+        midClick: true
+      });
+    </script>
 
   </div>
 </div>
