@@ -1,38 +1,73 @@
 <div class="day-card <%= day_state(day) %> <%= day_view(day) %> padded" style="z-index: <%= day_order(day) %> ">
-	<div class="day-card-collapsed row">
-		<h3 class="inline"> Day <%= day.day_number %> - <%= day_locations(day) %></h3>
-	</div>
-	<div class= "day-card-expanded row">
-		<div class= "two thirds">
-			<div class="day-card-body row">
-				<h2 class="inline">Day <%= day.human_day_number %></h2>
-				<p class="inline"> - <%= day.human_date %> </p>
-				<p> <%= day_locations(day) %></p>
-			</div>
-			<div class="day-card-details row">
-				<% if day.travel.present? %>
-					<p><strong>We're <%= day.travel.mode %>: </strong><%= day.travel.number %> - departing @ <%= day.travel.departure.strftime("%I:%M%p") %></p>
-					<% if day.travel.stopover.present? %>
-						<p><strong>Our Pitstop: </strong><%= day.travel.stopover %></p>
-					<% end %>
-					<p><strong>We'll Be There By: </strong><%= day.travel.arrival.strftime("%I:%M%p") %></p>
-				<% end %>
+  <div class="day-card-collapsed row">
+    <h3 class="inline"> Day <%= day.day_number %> - <%= day_locations(day) %></h3>
+  </div>
+  <div class= "day-card-expanded row">
+    <div class= "two thirds">
+      <div class="day-card-body row">
+        <h2 class="inline">Day <%= day.human_day_number %></h2>
+        <p class="inline"> - <%= day.human_date %> </p>
+        <p> <%= day_locations(day) %></p>
+      </div>
+      <div class="day-card-details row">
+        <% if day.travel.present? %>
+          <p><strong>We're <%= day.travel.mode %>: </strong><%= day.travel.number %> - departing @ <%= day.travel.departure.strftime("%I:%M%p") %></p>
+          <% if day.travel.stopover.present? %>
+            <p><strong>Our Pitstop: </strong><%= day.travel.stopover %></p>
+          <% end %>
+          <p><strong>We'll Be There By: </strong><%= day.travel.arrival.strftime("%I:%M%p") %></p>
+        <% end %>
 
-				<% if day.accomodation.present? %>
-					<p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
-				<% end %>
-				<br>
-				<% if day.trip_update.present? %>
-					<h2>Our Update</h2>
-					<p><strong>We Did: </strong><%= day.trip_update.doing %><p>
-					<p><strong>We Ate: </strong><%= day.trip_update.eating %><p>
-					<p><strong>Our Highlights: </strong><%= day.trip_update.highlights %><p>
-				<% end %>
-			</div>
-			<%= render partial: "day_comments", locals:{day: day} %>
-		</div>
-		<div class="one third">
-			<img class="centered image" src="<%= asset_path 'Polaroid_Picture.png' %>"/>
-		</div>
-	</div>
+        <% if day.accomodation.present? %>
+          <p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
+        <% end %>
+        <br>
+        <% if day.trip_update.present? %>
+          <h2>Our Update</h2>
+          <p><strong>We Did: </strong><%= day.trip_update.doing %><p>
+          <p><strong>We Ate: </strong><%= day.trip_update.eating %><p>
+          <p><strong>Our Highlights: </strong><%= day.trip_update.highlights %><p>
+        <% end %>
+      </div>
+      <div id="comments-day-<%= day.id %>" class="white-popup mfp-hide">
+        <%= render partial: "day_comments", locals:{day: day} %>
+      </div>
+    </div>
+    <div class="one third">
+      <button id="photos-btn-day-<%= day.id %>" class="day-card-photos" <%= 'disabled' unless day.trip_update.present? %> >Photos</button>
+      <button id="comments-btn-day-<%= day.id %>" class="day-card-comments">Comments</button>
+    </div>
+    
+    <% if day.trip_update.present? %>
+      <script type="text/javascript">
+      $('#photos-btn-day-<%= day.id %>').magnificPopup({
+        items: [
+          <% day.trip_update.trip_update_images.each do |image| %>
+            {
+              src: "<%= asset_url image.file %>",
+              type: 'image'
+            },
+          <% end %>
+        ],
+        gallery: {
+          enabled: true
+        },
+      });
+
+      </script>
+
+    <% end %>
+
+    <script type="text/javascript">
+      $('#comments-btn-day-<%= day.id %>').magnificPopup({
+        items: {
+          src: '#comments-day-<%= day.id %>',
+          type: 'inline'
+        },
+        type:'inline',
+        midClick: true
+      });
+    </script>
+
+  </div>
 </div>

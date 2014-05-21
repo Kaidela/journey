@@ -2,8 +2,11 @@
 	height: 60px;
 	padding-top: 10px;
 	background-color: rgba(0, 0, 0, 0.8);
-	font-family: QuicksandLight;
-	color: #ffffff;
+
+	&, h1 {
+		font-family: QuicksandLight;
+		color: #ffffff;
+	}
 }
 
 @font-face {
@@ -29,11 +32,13 @@ body {
 	background-color: #f3f3f2;
 	margin-top: 20px;
 	margin-bottom: 20px;
+
+	cursor: pointer;
 }
 
 .day-card.expanded{
 	//max-height: 1000px;
-
+	cursor: auto;
 	overflow: hidden;
 
 	transition: 1s ease-out;
@@ -111,6 +116,10 @@ button {
 		color: #FFFFFF;
 		border-color: #FFFFFF;
 	}
+}
+
+input[type="submit"] {
+	margin-top: 10px;
 }
 
 .logo {
