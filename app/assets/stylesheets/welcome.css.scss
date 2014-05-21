@@ -19,6 +19,18 @@
 	position: center;
 	background-color: rgba(0, 0, 0, 0.0);
 	color: #ffffff;
+
+		&, h2 {
+		font-family: QuicksandLight;
+		color: #ffffff;
+	}
+
+	a, 
+	a:hover, 
+	a:visited {
+		color: #fff;
+		text-decoration: none;
+	}
 }
 .option {
 	height: 80%;

@@ -49,8 +49,14 @@ body {
 	background-color: #f3f3f2;
 	margin-top: 20px;
 	margin-bottom: 20px;
-
 	cursor: pointer;
+	
+	&, h2 {
+		font-family: QuicksandLight;
+	}
+	&, h3 {
+		font-family: QuicksandLight;
+	}
 }
 
 .day-card.expanded{
@@ -116,14 +122,14 @@ body {
 }
 
 button {
-	background: #FA6900;
+	background: #f3f3f2;
 	border: 1px solid #FFFFFF;
 	font-family: Museo;
 	color: #FFFFFF;
 	text-shadow: 0 0 5px rgba(0,0,0,0.25);
 
 	&:hover {
-		background: #F38630;
+		background: rgba(251, 197, 153, 0.8);
 		font-family: Museo;
 		color: #FFFFFF;	
 	}

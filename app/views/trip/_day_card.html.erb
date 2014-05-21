@@ -34,8 +34,8 @@
       </div>
     </div>
     <div class="one third">
-      <button id="photos-btn-day-<%= day.id %>" class="day-card-photos" <%= 'disabled' unless day.trip_update.present? %> >Photos</button>
-      <button id="comments-btn-day-<%= day.id %>" class="day-card-comments">Comments</button>
+      <i id="photos-btn-day-<%= day.id %>" class="day-card-photos icon-camera icon-2x pull-right pad-right" <%= 'disabled' unless day.trip_update.present? %> ></i>
+      <i id="comments-btn-day-<%= day.id %>" class="day-card-comments icon-comment icon-2x pull-right pad-right"></i>
     </div>
     
     <% if day.trip_update.present? %>
