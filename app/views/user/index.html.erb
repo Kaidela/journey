@@ -19,11 +19,29 @@
 				<h2>Update a day</h2>
 				<br>
 				<p>Update today or a past day with details of your Journey.</p>
+					<div>
+						<%= select_tag(:days, options_for_select(['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'])) %>
+					</div>
+					<div>
+						<%= text_area_tag(:day_update) %>
+					</div>
+					<div>
+						<%= submit_tag("Update") %>
+					</div>
 			</div>
 			<div class="user-option">
 				<h2>Edit a day</h2>
 				<br>
 				<p>Edit the location or travel details of a future day.</p>
+					<div>
+						<%= select_tag(:days, options_for_select(['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'])) %>
+					</div>
+					<div>
+						<%= text_area_tag(:day_edit) %>
+					</div>
+					<div>
+						<%= submit_tag("Edit") %>
+					</div>
 			</div>
 			<div class="user-option">
 				<h2>Add a day</h2>
