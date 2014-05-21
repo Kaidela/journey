@@ -3,9 +3,26 @@
 	padding-top: 10px;
 	background-color: rgba(0, 0, 0, 0.8);
 
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	right: 0;
+	top: 0;
+
 	&, h1 {
 		font-family: QuicksandLight;
 		color: #ffffff;
+	}
+
+	h1 {
+		margin-left: 10px;
+	}
+
+	a, 
+	a:hover, 
+	a:visited {
+		color: #fff;
+		text-decoration: none;
 	}
 }
 
