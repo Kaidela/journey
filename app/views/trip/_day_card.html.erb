@@ -19,14 +19,26 @@
         <% end %>
 
         <% if day.accomodation.present? %>
-          <p><strong>We're Staying At:</strong> <%= day.accomodation.name %></p>
+          <i class="icon-home icon pull-left inline"></i>
+          <p class="inline"><%= day.accomodation.name %></p> 
         <% end %>
         <br>
         <% if day.trip_update.present? %>
           <h2>Our Update</h2>
-          <p><strong>We Did: </strong><%= day.trip_update.doing %><p>
-          <p><strong>We Ate: </strong><%= day.trip_update.eating %><p>
-          <p><strong>Our Highlights: </strong><%= day.trip_update.highlights %><p>
+          <div class="update-doing">
+            <i class="icon-globe icon pull-left inline"></i>
+            <p class="inline"><%= day.trip_update.doing %><p>
+          </div>
+          <div class="update-eating">
+            <i class="icon-food icon pull-left inline"></i> 
+            <p class="inline"><%= day.trip_update.eating %><p>
+          </div>
+          <div class="update-highlight">
+            <i class="icon-quote-left icon pull-left inline"></i>
+            <p class="inline"><%= day.trip_update.highlights %>
+              <i class="icon-quote-right icon inline"></i>
+            <p>
+          </div>
         <% end %>
       </div>
       <div id="comments-day-<%= day.id %>" class="white-popup mfp-hide">
