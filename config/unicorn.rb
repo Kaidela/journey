@@ -4,7 +4,7 @@ working_directory "/var/www/journey/current"
 
 # Unicorn PID file location
 # pid "/path/to/pids/unicorn.pid"
-pid "/var/www/journey/current/pids/unicorn.pid"
+pid "/var/www/journey/current/tmp/pids/unicorn.pid"
 
 # Path to logs
 # stderr_path "/path/to/log/unicorn.log"
