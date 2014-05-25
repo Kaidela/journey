@@ -57,14 +57,18 @@ Accomodation.create(:arrival => Date.new(2014,6,6),
   :name => 'DC Flat')
 
 
-#TripUpdate.create(:day => Date.new(2013,9,9),
- #  :doing => 'We headed to the fabric market in the morning and the headed to the propaganda art museum in the afternoon.',
-  # :eating => 'We had some noodles for lunch around the corner and then some really amazing burgers for dinner.',
-  # :highlights => 'The propaganda art museum was pretty interesting. The period is a little swept under the rug here and the museum is located in the basement of an appartment block. A bit creepy, but worthwhile.',
-  # :trip_update_images => [
-  #  TripUpdateImage.create(file: 'Day11_Img1.jpg'),
-  #  TripUpdateImage.create(file: 'Day11_Img2.jpg'),
-  #  TripUpdateImage.create(file: 'Day11_Img3.jpg')
+TripUpdate.find_by(:day => Date.new(2014,5,24)) || TripUpdate.create(:day => Date.new(2014,5,24))
+  .update(
+   :doing => 'We landed in LA after 24 hours of travel.',
+   :eating => 'We dove straight into American cuisine with bags of crawfish and shrimp.',
+   :highlights => 'While on the shuttle bus to pick up a hire car I saw Jonno waiting on the curb at LAX, jumping up to wave I fell into a kid as the bus stopped. Classic.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day1_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day1_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day1_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day1_Img4.jpg')
+  ]
+) 
 
 
 def destinations_for_day(day)
