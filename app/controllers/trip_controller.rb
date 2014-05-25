@@ -1,5 +1,5 @@
 class TripController < ApplicationController
   def index
-    @days = Day.all
+    @days = Day.all.order(:date)
   end
 end

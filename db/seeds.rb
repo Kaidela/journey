@@ -1,6 +1,5 @@
 Day.delete_all
 Travel.delete_all
-TripUpdate.delete_all
 
 START_DATE = Date.new(2014,5,24)
 DESTINATIONS = [
@@ -55,21 +54,6 @@ Accomodation.create(:arrival => Date.new(2014,5,31),
 Accomodation.create(:arrival => Date.new(2014,6,6),
   :departure => Date.new(2014,6,8),
   :name => 'DC Flat')
-
-
-TripUpdate.find_by(:day => Date.new(2014,5,24)) || TripUpdate.create(:day => Date.new(2014,5,24))
-  .update(
-   :doing => 'We landed in LA after 24 hours of travel.',
-   :eating => 'We dove straight into American cuisine with bags of crawfish and shrimp.',
-   :highlights => 'While on the shuttle bus to pick up a hire car I saw Jonno waiting on the curb at LAX, jumping up to wave I fell into a kid as the bus stopped. Classic.',
-   :trip_update_images => [
-    TripUpdateImage.create(file: 'Day1_Img1.jpg'),
-    TripUpdateImage.create(file: 'Day1_Img2.jpg'),
-    TripUpdateImage.create(file: 'Day1_Img3.jpg'),
-    TripUpdateImage.create(file: 'Day1_Img4.jpg')
-  ]
-) 
-
 
 def destinations_for_day(day)
   DESTINATIONS.select do |destination|
@@ -133,3 +117,17 @@ end
     :trip_update => day_trip_update(day_number))
 
 end
+
+day = Day.find_by(day_number: 1)
+day.trip_update = TripUpdate.create(
+   :doing => 'We landed in LA after 24 hours of travel.',
+   :eating => 'We dove straight into American cuisine with bags of crawfish and shrimp.',
+   :highlights => 'While on the shuttle bus to pick up a hire car I saw Jonno waiting on the curb at LAX, jumping up to wave I fell into a kid as the bus stopped. Classic.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day1_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day1_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day1_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day1_Img4.jpg')
+  ]
+)
+day.save!
