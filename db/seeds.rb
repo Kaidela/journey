@@ -131,3 +131,34 @@ day.trip_update = TripUpdate.create(
   ]
 )
 day.save!
+
+day = Day.find_by(day_number: 3)
+day.trip_update = TripUpdate.create(
+   :doing => 'We headed to Santa Monica for some time on the beach and then some star gazing at Griffith Observatory.',
+   :eating => 'We started the day with waffles and then after an epic 12 hours we grabbed some late night burgers.',
+   :highlights => 'A whole day of driving and no accidents, winning.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day2_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day2_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day2_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day2_Img4.jpg'),
+    TripUpdateImage.create(file: 'Day2_Img5.jpg'),
+    TripUpdateImage.create(file: 'Day2_Img6.jpg')
+  ]
+)
+day.save!
+
+day = Day.find_by(day_number: 3)
+day.trip_update = TripUpdate.create(
+   :doing => 'DISNEY LAND: the most magical place on earth.',
+   :eating => 'Ate more sugar than I\'m willing to freely admit.',
+   :highlights => 'We got in super early and the park was quite, so we rode Space Mountain twice! It was amazing.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day3_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day3_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day3_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day3_Img4.jpg'),
+    TripUpdateImage.create(file: 'Day3_Img5.jpg')
+  ]
+)
+day.save!
