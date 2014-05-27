@@ -54,7 +54,7 @@
       <script type="text/javascript">
       $('#photos-btn-day-<%= day.id %>').magnificPopup({
         items: [
-          <% day.trip_update.trip_update_images.each do |image| %>
+          <% day.trip_update.trip_update_images.order(:filename).each do |image| %>
             {
               src: "<%= asset_url image.file %>",
               type: 'image'
