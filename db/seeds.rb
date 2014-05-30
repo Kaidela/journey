@@ -169,8 +169,7 @@ day.trip_update = TripUpdate.create(
    :doing => 'Upgraded from LA (city) to LA (state).',
    :eating => 'Got acquainted with New Orleans Po Boys.',
    :highlights => nil,
-   :trip_update_images => nil,
-  ]
+   :trip_update_images => [],
 )
 day.save!
 
@@ -197,8 +196,8 @@ day.trip_update = TripUpdate.create(
    :eating => 'Devoured a slice of sweet potato pie; why do we not have this?',
    :highlights => 'On the drive back in we saw our first alligator in the swamp, then we had alligator sausage for dinner.',
    :trip_update_images => [
-    TripUpdateImage.create(file: 'Day5_Img1.jpg'),
-    TripUpdateImage.create(file: 'Day5_Img2.jpg')
+    TripUpdateImage.create(file: 'Day6_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day6_Img2.jpg')
   ]
 )
 day.save!
