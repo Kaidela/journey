@@ -162,3 +162,43 @@ day.trip_update = TripUpdate.create(
   ]
 )
 day.save!
+
+day = Day.find_by(day_number: 4)
+day.trip_update = TripUpdate.create(
+   :doing => 'Upgraded from LA (city) to LA (state).',
+   :eating => 'Got acquainted with New Orleans Po Boys.',
+   :highlights => nil,
+   :trip_update_images => nil,
+  ]
+)
+day.save!
+
+day = Day.find_by(day_number: 5)
+day.trip_update = TripUpdate.create(
+   :doing => 'We explored the city and continued on our quest for a decent coffee.',
+   :eating => 'No decent coffee, but I had an amazing crawfish pie.',
+   :highlights => 'Spent the evening nibbling on cheese and whining about American coffee with a couple of other travellers.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day5_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day5_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day5_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day5_Img4.jpg'),
+    TripUpdateImage.create(file: 'Day5_Img5.jpg'),
+    TripUpdateImage.create(file: 'Day5_Img6.jpg'),
+    TripUpdateImage.create(file: 'Day5_Img7.jpg')
+  ]
+)
+day.save!
+
+day = Day.find_by(day_number: 6)
+day.trip_update = TripUpdate.create(
+   :doing => 'We took a drive out of the city to Oak Alley plantation.',
+   :eating => 'Devoured a slice of sweet potato pie; why do we not have this?',
+   :highlights => 'On the drive back in we saw our first alligator in the swamp, then we had alligator sausage for dinner.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day5_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day5_Img2.jpg')
+  ]
+)
+day.save!
+
