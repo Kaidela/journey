@@ -11,33 +11,33 @@ DESTINATIONS = [
   {:arrive_date => Date.new(2014,6,8), :leave_date => Date.new(2014,6,10), :location => 'Melbourne'},
 ]
 
-Travel.create(:departure => Time.new(2014,5,24,9,05,0),
-  :arrival => Time.new(2014,5,24,14,45,0),
+Travel.create(:departure => Time.new(2014,5,24,9,05,0, "+10:00"),
+  :arrival => Time.new(2014,5,24,14,45,0, "+10:00"),
   :number => 'NZ2',
   :mode => 'Flying',
   :stopover => 'Auckland')
-Travel.create(:departure => Time.new(2014,5,27,8,00,0),
-  :arrival => Time.new(2014,5,27,13,41,0),
+Travel.create(:departure => Time.new(2014,5,27,8,00,0, "+10:00"),
+  :arrival => Time.new(2014,5,27,13,41,0, "+10:00"),
   :number => 'Delta 1552',
   :mode => 'Flying',
   :stopover => nil)
-Travel.create(:departure => Time.new(2014,5,31,6,15,0),
-  :arrival => Time.new(2014,5,31,10,11,0),
+Travel.create(:departure => Time.new(2014,5,31,6,15,0, "+10:00"),
+  :arrival => Time.new(2014,5,31,10,11,0, "+10:00"),
   :number => 'Delta 558',
   :mode => 'Flying',
   :stopover => nil)
-Travel.create(:departure => Time.new(2014,6,6,6,10,0),
-  :arrival => Time.new(2014,6,6,9,45,0),
+Travel.create(:departure => Time.new(2014,6,6,6,10,0, "+10:00"),
+  :arrival => Time.new(2014,6,6,9,45,0, "+10:00"),
   :number => '181',
   :mode => 'Training',
   :stopover => nil)
-Travel.create(:departure => Time.new(2014,6,8,9,15,0),
-  :arrival => Time.new(2014,6,8,11,45,0),
+Travel.create(:departure => Time.new(2014,6,8,9,15,0, "+10:00"),
+  :arrival => Time.new(2014,6,8,11,45,0, "+10:00"),
   :number => 'Delta 9250',
   :mode => 'Flying',
   :stopover => nil)
-Travel.create(:departure => Time.new(2014,6,8,22,30,0),
-  :arrival => Time.new(2014,8,8,10,30,0),
+Travel.create(:departure => Time.new(2014,6,8,22,30,0, "+10:00"),
+  :arrival => Time.new(2014,8,8,10,30,0, "+10:00"),
   :number => 'NZ5',
   :mode => 'Flying',
   :stopover => 'Auckland')
@@ -132,7 +132,7 @@ day.trip_update = TripUpdate.create(
 )
 day.save!
 
-day = Day.find_by(day_number: 3)
+day = Day.find_by(day_number: 2)
 day.trip_update = TripUpdate.create(
    :doing => 'We headed to Santa Monica for some time on the beach and then some star gazing at Griffith Observatory.',
    :eating => 'We started the day with waffles and then after an epic 12 hours we grabbed some late night burgers.',
@@ -143,7 +143,8 @@ day.trip_update = TripUpdate.create(
     TripUpdateImage.create(file: 'Day2_Img3.jpg'),
     TripUpdateImage.create(file: 'Day2_Img4.jpg'),
     TripUpdateImage.create(file: 'Day2_Img5.jpg'),
-    TripUpdateImage.create(file: 'Day2_Img6.jpg')
+    TripUpdateImage.create(file: 'Day2_Img6.jpg'),
+    TripUpdateImage.create(file: 'Day2_Img7.jpg')
   ]
 )
 day.save!
@@ -152,10 +153,10 @@ day = Day.find_by(day_number: 3)
 day.trip_update = TripUpdate.create(
    :doing => 'DISNEY LAND: the most magical place on earth.',
    :eating => 'Ate more sugar than I\'m willing to freely admit.',
-   :highlights => 'We got in super early and the park was quite, so we rode Space Mountain twice! It was amazing.',
+   :highlights => 'We got in super early and the park was quiet, so we rode Space Mountain twice! It was amazing.',
    :trip_update_images => [
     TripUpdateImage.create(file: 'Day3_Img1.jpg'),
-    TripUpdateImage.create(file: 'Day3_Img2.jpg'),
+    # TripUpdateImage.create(file: 'Day3_Img2.jpg'),
     TripUpdateImage.create(file: 'Day3_Img3.jpg'),
     TripUpdateImage.create(file: 'Day3_Img4.jpg'),
     TripUpdateImage.create(file: 'Day3_Img5.jpg')
