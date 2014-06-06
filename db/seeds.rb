@@ -270,3 +270,20 @@ day.trip_update = TripUpdate.create(
   ]
 )
 day.save!
+
+day = Day.find_by(day_number: 14)
+day.trip_update = TripUpdate.create(
+   :doing => 'We took a nice long bike ride around the sights and visited the WWII Memorial for D-Day.',
+   :eating => 'After visiting the memorial we found some "freedom-pops" to help us cool down.',
+   :highlights => 'Getting out in the fresh air of DC after days of NYC pollution.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day14_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day14_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day14_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day14_Img4.jpg'),
+    TripUpdateImage.create(file: 'Day14_Img5.jpg'),
+    TripUpdateImage.create(file: 'Day14_Img6.jpg')
+]
+  ]
+)
+day.save!
