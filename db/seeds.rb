@@ -183,7 +183,6 @@ day.trip_update = TripUpdate.create(
     TripUpdateImage.create(file: 'Day5_Img2.jpg'),
     TripUpdateImage.create(file: 'Day5_Img3.jpg'),
     TripUpdateImage.create(file: 'Day5_Img4.jpg'),
-    TripUpdateImage.create(file: 'Day5_Img5.jpg'),
     TripUpdateImage.create(file: 'Day5_Img6.jpg'),
     TripUpdateImage.create(file: 'Day5_Img7.jpg')
   ]
@@ -266,7 +265,6 @@ day.trip_update = TripUpdate.create(
    :highlights => 'The UN, duh! I dreamed of the day I would be here!!!',
    :trip_update_images => [
     TripUpdateImage.create(file: 'Day13_Img1.jpg')
-]
   ]
 )
 day.save!
