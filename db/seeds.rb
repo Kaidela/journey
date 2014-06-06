@@ -203,3 +203,71 @@ day.trip_update = TripUpdate.create(
 )
 day.save!
 
+day = Day.find_by(day_number: 9)
+day.trip_update = TripUpdate.create(
+   :doing => 'We spent our first full day in NYC relaxing in the park and hitting the shops.',
+   :eating => 'We had our first slice New York pizza. Yum!',
+   :highlights => 'Discovered the most magical toy store yet!',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day9_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day9_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day9_Img3.jpg')
+  ]
+)
+day.save!
+
+day = Day.find_by(day_number: 10)
+day.trip_update = TripUpdate.create(
+   :doing => 'We headed to the 9/11 Memorial and took a stroll across Brooklyn Bridge.',
+   :eating => 'More pizza, this time it was a 10/10!',
+   :highlights => 'The memorial was massive and very moving, could have spent the entire day there.',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day10_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day10_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day10_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day10_Img4.jpg')
+  ]
+)
+day.save!
+
+day = Day.find_by(day_number: 11)
+day.trip_update = TripUpdate.create(
+   :doing => 'We spent the day discovering dinosaurs at the Natural History Museum before heading to the Brox to see the Yankees.',
+   :eating => 'Hot dogs and beer at the baseball!',
+   :highlights => 'I posed with a tri-SARAH-tops!',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day11_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day11_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day11_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day11_Img4.jpg')
+  ]
+)
+day.save!
+
+day = Day.find_by(day_number: 12)
+day.trip_update = TripUpdate.create(
+   :doing => 'We took the ferry to Statten Island (past the statue) and then wen\'t to Top of the Rock for great views.',
+   :eating => 'Late night pizza for $1.',
+   :highlights => 'We went up 67th floors in under 45 seconds! Views = WOW!',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day12_Img1.jpg'),
+    TripUpdateImage.create(file: 'Day12_Img2.jpg'),
+    TripUpdateImage.create(file: 'Day12_Img3.jpg'),
+    TripUpdateImage.create(file: 'Day12_Img4.jpg'),
+    TripUpdateImage.create(file: 'Day12_Img5.jpg'),
+    TripUpdateImage.create(file: 'Day12_Img6.jpg')
+  ]
+)
+day.save!
+
+day = Day.find_by(day_number: 13)
+day.trip_update = TripUpdate.create(
+   :doing => 'We toured the United Nations, nuff said.',
+   :eating => 'I ate an organic chia seed pudding for breakfast, closest we\'ve been to reall food in days.',
+   :highlights => 'The UN, duh! I dreamed of the day I would be here!!!',
+   :trip_update_images => [
+    TripUpdateImage.create(file: 'Day13_Img1.jpg')
+]
+  ]
+)
+day.save!
