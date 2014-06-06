@@ -244,7 +244,7 @@ day.save!
 
 day = Day.find_by(day_number: 12)
 day.trip_update = TripUpdate.create(
-   :doing => 'We took the ferry to Statten Island (past the statue) and then wen\'t to Top of the Rock for great views.',
+   :doing => 'We took the ferry to Statten Island (past the statue) and then went to Top of the Rock for great views.',
    :eating => 'Late night pizza for $1.',
    :highlights => 'We went up 67th floors in under 45 seconds! Views = WOW!',
    :trip_update_images => [
@@ -261,7 +261,7 @@ day.save!
 day = Day.find_by(day_number: 13)
 day.trip_update = TripUpdate.create(
    :doing => 'We toured the United Nations, nuff said.',
-   :eating => 'I ate an organic chia seed pudding for breakfast, closest we\'ve been to reall food in days.',
+   :eating => 'I ate an organic chia seed pudding for breakfast, closest we\'ve been to real food in days.',
    :highlights => 'The UN, duh! I dreamed of the day I would be here!!!',
    :trip_update_images => [
     TripUpdateImage.create(file: 'Day13_Img1.jpg')
