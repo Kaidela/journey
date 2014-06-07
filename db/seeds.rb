@@ -281,7 +281,6 @@ day.trip_update = TripUpdate.create(
     TripUpdateImage.create(file: 'Day14_Img4.jpg'),
     TripUpdateImage.create(file: 'Day14_Img5.jpg'),
     TripUpdateImage.create(file: 'Day14_Img6.jpg')
-]
   ]
 )
 day.save!
